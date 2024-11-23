@@ -2,14 +2,12 @@ import unittest
 from math import pi
 from calculate import calc
 
-
 class MyTestArea(unittest.TestCase):
-
     def test_calc_circle_area(self):
         fig = "circle"
         func = "area"
         size = [10]
-        desired_result = 100 * pi
+        desired_result = 100*pi
 
         result = calc(fig, func, size)
 
@@ -37,7 +35,6 @@ class MyTestArea(unittest.TestCase):
 
 
 class MyTestPerimeter(unittest.TestCase):
-
     def test_calc_circle_perimeter(self):
         fig = "circle"
         func = "perimeter"
@@ -70,12 +67,11 @@ class MyTestPerimeter(unittest.TestCase):
 
 
 class MyTestNegativeNumber(unittest.TestCase):
-
     def test_calc_circle_neg_area(self):
         fig = "circle"
         func = "area"
         size = [-5]
-        expected_result = "Size must be > 0."
+        expected_result = "Size should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
@@ -86,7 +82,7 @@ class MyTestNegativeNumber(unittest.TestCase):
         fig = "circle"
         func = "perimeter"
         size = [-5]
-        expected_result = "Size must be > 0."
+        expected_result = "Size should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
@@ -97,7 +93,7 @@ class MyTestNegativeNumber(unittest.TestCase):
         fig = "square"
         func = "area"
         size = [-1]
-        expected_result = "Radius must be > 0."
+        expected_result = "Radius should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
@@ -108,7 +104,7 @@ class MyTestNegativeNumber(unittest.TestCase):
         fig = "square"
         func = "perimeter"
         size = [-1]
-        expected_result = "Size must be > 0."
+        expected_result = "Size should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
@@ -119,13 +115,14 @@ class MyTestNegativeNumber(unittest.TestCase):
         fig = "triangle"
         func = "area"
         size = [-1, 2, 3]
-        expected_result = "Size must be > 0."
+        expected_result = "Size should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
 
         self.assertEqual(str(context.exception), expected_result)
-        
+
+
     def test_calc_triangle_neg_perimeter(self):
         fig = "triangle"
         func = "perimeter"
