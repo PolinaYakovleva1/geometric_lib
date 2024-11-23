@@ -22,15 +22,15 @@ class SquareTest(unittest.TestCase):
     def test_area_negative(self):
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "area", [-1])
-        self.assertEqual(str(context.exception), "Size must be > 0.")
+        self.assertEqual(str(context.exception), "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "area", [-52])
-        self.assertEqual(str(context.exception), "Size must be > 0.")
+        self.assertEqual(str(context.exception), "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "area", [-1356])
-        self.assertEqual(str(context.exception), "Size must be > 0.")
+        self.assertEqual(str(context.exception), "Size should be > 0.")
 
     """Perimeter"""
 
@@ -51,15 +51,15 @@ class SquareTest(unittest.TestCase):
     def test_perimeter_negative(self):
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "perimeter", [-5])
-        self.assertEqual(str(context.exception), "Size must be > 0.")
+        self.assertEqual(str(context.exception), "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "perimeter", [-6])
-        self.assertEqual(str(context.exception), "Size must be > 0.")
+        self.assertEqual(str(context.exception), "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "perimeter", [-52])
-        self.assertEqual(str(context.exception), "Size must be > 0.")
+        self.assertEqual(str(context.exception), "Size should be > 0.")
 
 
 if __name__ == "__main__":
