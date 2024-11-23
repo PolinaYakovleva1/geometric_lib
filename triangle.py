@@ -1,6 +1,12 @@
 def area(a, b, c):
-    return (a + b + c) / 2
+    if a >= 0 and b >= 0 and c >= 0:
+        return (a + b + c) / 2
+    else:
+        raise ValueError("Size should be > 0.")
 
 
 def perimeter(a, b, c):
-    return a + b + c
+    if a >= 0 and b >= 0 and c >= 0:
+        return a + b + c
+    else:
+        raise ValueError("Size should be > 0.")
