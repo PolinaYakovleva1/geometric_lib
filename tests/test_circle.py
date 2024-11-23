@@ -23,7 +23,6 @@ class CircleTest(unittest.TestCase):
             calculate.calc("circle", "area", [-52])
         self.assertEqual(str(context.exception), error_message)
         with self.assertRaises(ValueError) as context:
-
             calculate.calc("circle", "area", [-9])
         self.assertEqual(str(context.exception), error_message)
 
@@ -35,7 +34,7 @@ class CircleTest(unittest.TestCase):
         self.assertEqual(calculate.calc("circle", "perimeter", [3]),
                          18.84955592153876)
         self.assertEqual(calculate.calc("circle", "perimeter", [52]),
-                        326.7256359733385)
+                         326.7256359733385)
 
     def test_perimeter_negative(self):
         error_message = "Size should be > 0."
