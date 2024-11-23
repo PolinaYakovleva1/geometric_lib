@@ -23,17 +23,17 @@ class TriangleTest(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calculate.calc("triangle", "area", [-52, -52, -52])
         self.assertEqual(str(context.exception),
-                         "Size must be > 0.")
+                         "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("triangle", "area", [-9, -8, -7])
         self.assertEqual(str(context.exception),
-                         "Size must be > 0.")
+                         "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("triangle", "area", [-13, -1, -56])
         self.assertEqual(str(context.exception),
-                         "Size must be > 0.")
+                         "Size should be > 0.")
 
     """Perimeter"""
 
@@ -59,17 +59,17 @@ class TriangleTest(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calculate.calc("triangle", "perimeter", [-1, -1, -1])
         self.assertEqual(str(context.exception),
-                         "Size must be > 0.")
+                         "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("triangle", "perimeter", [-1, -2, -3])
         self.assertEqual(str(context.exception),
-                         "Size must be > 0.")
+                         "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("triangle", "perimeter", [-4, -5, -6])
         self.assertEqual(str(context.exception),
-                         "Size must be > 0.")
+                         "Size should be > 0.")
 
 
 if __name__ == "__main__":
