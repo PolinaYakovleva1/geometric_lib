@@ -30,11 +30,11 @@ if __name__ == "__main__":
     size = list()
 
     while fig not in figs:
-        fig = input(f"Enter the name of the shape, "
+        fig = input("Enter the name of the shape, "
                     "the following options are available {figs}:\n")
 
     while func not in funcs:
-        func = input(f"Enter the name of the function, "
+        func = input("Enter the name of the function, "
                      "the following options are available {funcs}:\n")
 
     while len(size) != sizes.get(f"{func}-{fig}", 1):
