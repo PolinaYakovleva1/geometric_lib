@@ -4,6 +4,7 @@ from calculate import calc
 
 
 class MyTestArea(unittest.TestCase):
+
     def test_calc_circle_area(self):
         fig = "circle"
         func = "area"
@@ -36,6 +37,7 @@ class MyTestArea(unittest.TestCase):
 
 
 class MyTestPerimeter(unittest.TestCase):
+
     def test_calc_circle_perimeter(self):
         fig = "circle"
         func = "perimeter"
@@ -68,6 +70,7 @@ class MyTestPerimeter(unittest.TestCase):
 
 
 class MyTestNegativeNumber(unittest.TestCase):
+
     def test_calc_circle_neg_area(self):
         fig = "circle"
         func = "area"
@@ -122,7 +125,7 @@ class MyTestNegativeNumber(unittest.TestCase):
             calc(fig, func, size)
 
         self.assertEqual(str(context.exception), expected_result)
-
+        
     def test_calc_triangle_neg_perimeter(self):
         fig = "triangle"
         func = "perimeter"
