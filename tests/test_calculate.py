@@ -94,7 +94,7 @@ class MyTestNegativeNumber(unittest.TestCase):
         fig = "square"
         func = "area"
         size = [-1]
-        expected_result = "Radius should be > 0."
+        expected_result = "Size should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
@@ -127,7 +127,7 @@ class MyTestNegativeNumber(unittest.TestCase):
         fig = "triangle"
         func = "perimeter"
         size = [-1, 2, 3]
-        expected_result = "Size must be > 0."
+        expected_result = "Size should be > 0."
 
         with self.assertRaises(ValueError) as context:
             calc(fig, func, size)
