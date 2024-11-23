@@ -24,20 +24,17 @@ def calc(fig, func, size):
     return result
 
 if __name__ == "__main__":
-	func = ''
-	fig = ''
-	size = list()
+    func = ''
+    fig = ''
+    size = list()
     
-	while fig not in figs:
-		fig = input(f"Enter the name of the shape, the following options are available {figs}:\n")
+    while fig not in figs:
+        fig = input(f"Enter the name of the shape, the following options are available {figs}:\n")
+    
+    while func not in funcs:
+        func = input(f"Enter the name of the function, the following options are available {funcs}:\n")
+    
+    while len(size) != sizes.get(f"{func}-{fig}", 1):
+        size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
 	
-	while func not in funcs:
-		func = input(f"Enter the name of the function, the following options are available {funcs}:\n")
-	
-	while len(size) != sizes.get(f"{func}-{fig}", 1):
-		size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
-	
-	calc(fig, func, size)
-
-
-
+	print(calc(fig, func, size))
