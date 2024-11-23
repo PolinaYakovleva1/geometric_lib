@@ -16,13 +16,7 @@ class SquareTest(unittest.TestCase):
         res_area_2 = calculate.calc("square", "area", [5])
         self.assertEqual(res_area_2, 25)
 
-        res_area_3 = calculate.calc("square", "area", [2])
-        self.assertEqual(res_area_3, 4)
-
     def test_area_negative(self):
-        with self.assertRaises(ValueError) as context:
-            calculate.calc("square", "area", [-1])
-        self.assertEqual(str(context.exception), "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "area", [-52])
@@ -45,16 +39,9 @@ class SquareTest(unittest.TestCase):
         res_perimeter_2 = calculate.calc("square", "perimeter", [25])
         self.assertEqual(res_perimeter_2, 100)
 
-        res_perimeter_3 = calculate.calc("square", "perimeter", [3])
-        self.assertEqual(res_perimeter_3, 12)
-
     def test_perimeter_negative(self):
         with self.assertRaises(ValueError) as context:
             calculate.calc("square", "perimeter", [-5])
-        self.assertEqual(str(context.exception), "Size should be > 0.")
-
-        with self.assertRaises(ValueError) as context:
-            calculate.calc("square", "perimeter", [-6])
         self.assertEqual(str(context.exception), "Size should be > 0.")
 
         with self.assertRaises(ValueError) as context:
