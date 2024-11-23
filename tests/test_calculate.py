@@ -2,6 +2,7 @@ import unittest
 from math import pi
 from calculate import calc
 
+
 class MyTestArea(unittest.TestCase):
     def test_calc_circle_area(self):
         fig = "circle"
@@ -121,7 +122,6 @@ class MyTestNegativeNumber(unittest.TestCase):
             calc(fig, func, size)
 
         self.assertEqual(str(context.exception), expected_result)
-
 
     def test_calc_triangle_neg_perimeter(self):
         fig = "triangle"
